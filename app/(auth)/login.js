@@ -26,6 +26,10 @@ const Login = () => {
     const handleButton = () => {
         navigation.navigate('register')
     }
+
+    const signin = () => {
+        navigation.navigate('register')
+    }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#f0f3fa' }}>
             <View style={styles.container}>
@@ -71,12 +75,15 @@ const Login = () => {
                             onChange={password => setForm({ ...form, password })}
                         />
                     </View>
+
                     <Pressable
-                    style={styles.button}
-                    onPress={handleButton}
-                >
-                    <Text style={styles.text}>Get Started</Text>
-                </Pressable>
+                        style={styles.button}
+                        onPress={handleButton}
+                    >
+                        <Text style={styles.text}>Get Started</Text>
+                    </Pressable>
+
+                        <Text style={styles.signin}> Or</Text>
                 </View>
             </View>
         </SafeAreaView>
@@ -138,7 +145,7 @@ const styles = StyleSheet.create({
         borderWidth: 0.5,
     },
 
-        button: {
+    button: {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#ffaebb',
@@ -149,5 +156,10 @@ const styles = StyleSheet.create({
         elevation: 8,
         textAlign: 'center',
     },
+
+    signin: {
+        paddingVertical: 20,
+        alignSelf: 'center',
+    }
 
 })
