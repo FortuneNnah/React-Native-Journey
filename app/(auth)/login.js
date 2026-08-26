@@ -83,7 +83,14 @@ const Login = () => {
                         <Text style={styles.text}>Get Started</Text>
                     </Pressable>
 
-                        <Text style={styles.signin}> Or</Text>
+                    <Text style={styles.or}> Or</Text>
+
+                    <Pressable
+                        style={styles.button}
+                        onPress={handleButton}
+                    >
+                        <Text style={styles.signin}>Sign In</Text>
+                    </Pressable>
                 </View>
             </View>
         </SafeAreaView>
@@ -157,9 +164,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
 
-    signin: {
-        paddingVertical: 20,
+    or:{
         alignSelf: 'center',
-    }
+        padding: 10,
+    },
+
+    signin: {
+        alignSelf: 'center',
+
+    },
 
 })
