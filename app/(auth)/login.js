@@ -26,10 +26,6 @@ const Login = () => {
     const handleButton = () => {
         navigation.navigate('register')
     }
-
-    const signin = () => {
-        navigation.navigate('register')
-    }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#f0f3fa' }}>
             <View style={styles.container}>
@@ -78,7 +74,6 @@ const Login = () => {
 
                     <Pressable
                         style={styles.button}
-                        onPress={handleButton}
                     >
                         <Text style={styles.text}>Get Started</Text>
                     </Pressable>
