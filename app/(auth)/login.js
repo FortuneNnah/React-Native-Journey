@@ -24,15 +24,15 @@ const Login = () => {
     })
 
     const handleButton = () => {
-        navigation.navigate('register')
+        navigation.navigate('signin');
     }
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#f0f3fa' }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: '#ffffff' }}>
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Image
                         style={styles.image}
-                        source={{ uri: 'https://images.unsplash.com/vector-1759412736247-427d9a325079?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }}
+                        source={{ uri: 'https://images.unsplash.com/vector-1754829494850-95549a50701f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }}
                         alt='logo'
                     />
                     <Text style={styles.title}>Create Account</Text>
@@ -75,17 +75,11 @@ const Login = () => {
                     <Pressable
                         style={styles.button}
                     >
-                        <Text style={styles.text}>Get Started</Text>
+                        <Text style={styles.text}>Create Account</Text>
                     </Pressable>
 
-                    <Text style={styles.or}> Or</Text>
+                    <Text style={styles.or}>Already have an account? <Text style={styles.signin} onPress={handleButton}>Sign In</Text></Text>
 
-                    <Pressable
-                        style={styles.button}
-                        onPress={handleButton}
-                    >
-                        <Text style={styles.signin}>Sign In</Text>
-                    </Pressable>
                 </View>
             </View>
         </SafeAreaView>
@@ -97,7 +91,7 @@ export default Login
 const styles = StyleSheet.create({
     container: {
         fontFamily: '',
-        padding: 24,
+        padding: 20,
         flex: 1,
     },
 
@@ -150,23 +144,41 @@ const styles = StyleSheet.create({
     button: {
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ffaebb',
+        backgroundColor: '#1e2cf6',
         flexDirection: 'row',
-        borderRadius: 8,
-        paddingVertical: 10,
+        borderRadius: 50,
+        paddingVertical: 17,
         paddingHorizontal: 20,
-        elevation: 8,
         textAlign: 'center',
     },
 
-    or:{
+    button2: {
+        backgroundColor: 'transparent',
+        borderColor: '#1e2cf6',
+        borderWidth: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        borderRadius: 50,
+        paddingVertical: 17,
+        paddingHorizontal: 20,
+        textAlign: 'center',
+    },
+
+    text: {
+        fontSize: 15,
+        color: '#fff',
+    },
+
+    or: {
         alignSelf: 'center',
         padding: 10,
     },
 
     signin: {
         alignSelf: 'center',
-
+        fontSize: 15,
+        color: '#1e2cf6',
     },
 
 })
