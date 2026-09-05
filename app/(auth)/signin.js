@@ -29,7 +29,7 @@ const Signin = () => {
             href='/login'
             onPress={handleButton}
           >
-            <Text style={styles.signin}>Get Started</Text>
+            <Text style={styles.signinbtn}>Get Started</Text>
           </Pressable>
         </View>
 
@@ -49,15 +49,15 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    width: 120,
-    height: 120,
+    width: 150,
+    height: 150,
     alignSelf: 'center',
     borderRadius: 80,
     marginBottom: 20,
   },
 
   text: {
-    fontSize: 35,
+    fontSize: 40,
     fontWeight: 700,
     alignSelf: 'center'
   },
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   subtext: {
     fontSize: 15,
     maxWidth: 300,
-    fontWeight: 100,
+    fontWeight: 500,
     color: '#474646',
     textAlign: 'center',
     paddingVertical: 5,
@@ -83,9 +83,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
  
-  signin: {
+  signinbtn: {
     fontSize: 15,
-    color: '#fff',
+    color: '#ffffff',
   }
 
 })
