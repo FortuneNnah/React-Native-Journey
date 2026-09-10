@@ -6,13 +6,12 @@ const RootLayout = () => {
     return (
         <Stack screenOptions={{
             headerStyle: {
-                backgroundColor: "#ff9a1f",
+                backgroundColor: "#112acf",
             },
             headerTintColor: "#fff",
         }}>
-            <Stack.Screen name='(auth)' options={{ headerShown: false }} />
 
-            <Stack.Screen name='index' options={{ title: 'Home' }} />
+            <Stack.Screen name='index' options={{ headerShown: false }} />
             <Stack.Screen name='About' options={{ title: 'About Us' }} />
             <Stack.Screen name='Contact' options={{ title: 'Contact Us' }} />
 
