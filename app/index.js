@@ -9,24 +9,26 @@ const index = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.logo}>PawMatch</Text>
+        <Text style={styles.logo}>Paw
+          <Text style={{ color: '#df8562' }}>Match</Text>
+        </Text>
 
-        <Pressable style={styles.skipButton} onPress={navigateToNextScreen}>
+        {/* <Pressable style={styles.skipButton} onPress={navigateToNextScreen}>
           <Text style={styles.skip}>Skip</Text>
-        </Pressable>
+        </Pressable> */}
       </View>
 
       <View style={styles.content}>
         <Image
           source={{
-            uri: 'https://images.unsplash.com/vector-1740286698436-d4049d34f57c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y3V0ZSUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D',
+            uri: 'https://images.unsplash.com/vector-1776255536795-5d01e379f92e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           }}
           style={styles.image}
         />
-        <Text style={styles.textcontent}>Your new best Friend is waiting</Text>
-        <Text style={styles.description}>
+        <Text style={styles.textcontent}>Your new best Friend is waiting...</Text>
+        {/* <Text style={styles.description}>
           Discover loving cats looking for a forever home and find the companion that fits your life perfectly
-        </Text>
+        </Text> */}
 
         <Pressable style={styles.button} onPress={navigateToNextScreen}>
           <Text style={styles.buttonText}>Let's Find My Pup</Text>
@@ -41,14 +43,14 @@ export default index
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8e2d0',
+    backgroundColor: '#fffbfb',
     paddingTop: 52,
     paddingBottom: 28,
   },
 
   header: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
     paddingHorizontal: 22,
@@ -59,9 +61,10 @@ const styles = StyleSheet.create({
   logo: {
     fontFamily: 'sans-serif',
     fontWeight: '800',
-    fontSize: 22,
+    fontSize: 28,
+    alignContent: 'center',
     color: '#111827',
-    letterSpacing: 0.3,
+    letterSpacing: 0.4,
   },
 
   skipButton: {
@@ -75,7 +78,8 @@ const styles = StyleSheet.create({
   skip: {
     fontSize: 13,
     color: '#4B5563',
-    fontWeight: '600',
+    fontWeight: '700',
+    letterSpacing: 0.2,
   },
 
   content: {
@@ -84,37 +88,38 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'stretch',
     paddingHorizontal: 24,
-    paddingTop: 10,
-    paddingBottom: 8,
+    paddingTop: 8,
+    paddingBottom: 10,
   },
 
   image: {
     width: '100%',
     maxWidth: 320,
-    height: 260,
+    height: 362,
     alignSelf: 'center',
     resizeMode: 'cover',
-    borderRadius: 28,
-    marginBottom: 24,
+    borderRadius: 30,
+    marginBottom: 26,
   },
 
   textcontent: {
     width: '100%',
-    fontSize: 30,
-    lineHeight: 38,
-    fontWeight: '700',
+    fontSize: 34,
+    lineHeight: 42,
+    fontWeight: '800',
     color: '#111827',
-    textAlign: 'left',
-    marginBottom: 10,
+    textAlign: 'center',
+    marginBottom: 12,
+    letterSpacing: -0.8,
   },
 
   description: {
     width: '100%',
-    fontSize: 15,
-    lineHeight: 22,
+    fontSize: 16,
+    lineHeight: 24,
     color: '#666d76',
     textAlign: 'left',
-    marginBottom: 10,
+    marginBottom: 8,
   },
 
   button: {
@@ -123,19 +128,20 @@ const styles = StyleSheet.create({
     borderRadius: 999,
     paddingHorizontal: 18,
     paddingVertical: 16,
-    marginTop: 26,
+    marginTop: 28,
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
-    elevation: 2,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.12,
+    shadowRadius: 10,
+    elevation: 3,
   },
 
   buttonText: {
-    fontSize: 15,
+    fontSize: 16,
     color: '#fff',
     fontWeight: '700',
+    letterSpacing: 0.2,
   },
 })
