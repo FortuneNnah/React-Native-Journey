@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import { router } from 'expo-router'
+import Button from './components/Button'
 
 const navigateToNextScreen = () => {
   router.push('/About')
@@ -25,14 +26,12 @@ const index = () => {
           }}
           style={styles.image}
         />
-        <Text style={styles.textcontent}>Your new best Friend is waiting...</Text>
-        {/* <Text style={styles.description}>
+        <Text style={styles.textcontent}>Your new best Friend is waiting....</Text>
+        <Text style={styles.description}>
           Discover loving cats looking for a forever home and find the companion that fits your life perfectly
-        </Text> */}
+        </Text>
 
-        <Pressable style={styles.button} onPress={navigateToNextScreen}>
-          <Text style={styles.buttonText}>Let's Find My Pup</Text>
-        </Pressable>
+          <Button onPress={navigateToNextScreen}  />
       </View>
     </View>
   )
@@ -118,30 +117,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     color: '#666d76',
-    textAlign: 'left',
+    textAlign: 'center',
     marginBottom: 8,
   },
 
-  button: {
-    width: '100%',
-    backgroundColor: '#df8562',
-    borderRadius: 999,
-    paddingHorizontal: 18,
-    paddingVertical: 16,
-    marginTop: 28,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.12,
-    shadowRadius: 10,
-    elevation: 3,
-  },
 
-  buttonText: {
-    fontSize: 16,
-    color: '#fff',
-    fontWeight: '700',
-    letterSpacing: 0.2,
-  },
 })
