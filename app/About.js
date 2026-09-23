@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import { useState } from 'react'
+import Button from './components/Button'
 
 
 const cards = [
@@ -30,6 +31,7 @@ const About = () => {
                             </View>
                         </Pressable>
                     ))}
+                    <Button />
                 </View>
             </View>
         </View>
