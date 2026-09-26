@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View, Pressable} from 'react-native'
-import React from 'react'
+import { Ionicons } from '@expo/vector-icons'
 
 
-const Button = ({onPress}) => {
+const Button = ({onPress, title}) => {
     return (
         <View>
             <Pressable style={styles.button} onPress={onPress} >
-                <Text style={styles.buttonText}>Let's Find My Pup</Text>
+                <Text style={styles.buttonText}>{title} {<Ionicons size={15} name='arrow-forward-outline'/>}</Text>
             </Pressable>
         </View>
     )
@@ -36,5 +36,6 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: '700',
         letterSpacing: 0.2,
+        alignItems: 'center'
     },
 })

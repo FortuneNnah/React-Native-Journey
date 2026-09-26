@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import { useState } from 'react'
+import { router } from 'expo-router'
 import Button from './components/Button'
 
 
@@ -9,12 +10,17 @@ const cards = [
     { image: 'https://images.unsplash.com/vector-1789106998095-4aa1d84f9a71?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFyayUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D', title: 'Park playdates', description: 'Very social, loves dogs and children' },
     { image: 'https://plus.unsplash.com/premium_vector-1721649515865-ca0220d8eab1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxheSUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D', title: 'Backyard hangouts', description: 'Independent, content staying close to home' },
 ]
+
+const navigateToNextScreen = () => {
+    router.push('/Browse')
+}
+
 const About = () => {
     const [selectedCard, setSelectedCard] = useState(null)
     return (
         <View style={styles.container}>
+            <Text style={styles.head}>What does a perfect day with a cat look like?</Text>
             <View style={styles.content}>
-                <Text style={styles.head}>What does your perfect day with a cat look like?</Text>
                 <View style={styles.cardsContainer}>
                     {cards.map((cards, index) => (
                         <Pressable
@@ -31,8 +37,11 @@ const About = () => {
                             </View>
                         </Pressable>
                     ))}
-                    <Button />
                 </View>
+                <Button 
+                title="Next" 
+                onPress={navigateToNextScreen} />
+
             </View>
         </View>
     )
@@ -46,35 +55,41 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
     },
-    content: {
-        flex: 1,
-        fontFamily: 'sans-serif',
-        paddingTop: 12,
-        paddingHorizontal: 22,
-    },
+
     head: {
         fontWeight: 700,
         fontSize: 26,
         LineHeight: 32,
         color: "#000",
-        marginBottom: 20,
+        marginBottom: 7,
+        paddingTop: 12,
+        paddingHorizontal: 27,
+    },
+
+    content: {
+        flex: 1,
+        justifyContent: "space-between",
+        fontFamily: 'sans-serif',
+        paddingTop: 12,
+        paddingBottom: 70,
     },
 
     cardsContainer: {
-        gap: 12,
+        gap: 5,
     },
 
     card: {
         flexDirection: 'row',
+        alignItems: "center",
         backgroundColor: '#fff',
         gap: 12,
         padding: 12,
-        paddingVertical: 18,
-        borderRadius: 18,
-        marginBottom: 16,
+        paddingVertical: 15,
+        borderRadius: 15,
+        marginBottom: 15,
         overflow: 'hidden',
-        elevation: 1,
-        borderWidth: 1,
+        elevation: 1.5,
+        borderWidth: 2,
         borderColor: 'transparent',
     },
 
@@ -91,7 +106,7 @@ const styles = StyleSheet.create({
     },
 
     cardDescription: {
-        color: '#555'
+        color: '#8b8989'
     },
 
     selectedCard: {

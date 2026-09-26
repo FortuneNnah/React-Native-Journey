@@ -13,10 +13,6 @@ const index = () => {
         <Text style={styles.logo}>Paw
           <Text style={{ color: '#df8562' }}>Match</Text>
         </Text>
-
-        {/* <Pressable style={styles.skipButton} onPress={navigateToNextScreen}>
-          <Text style={styles.skip}>Skip</Text>
-        </Pressable> */}
       </View>
 
       <View style={styles.content}>
@@ -28,10 +24,12 @@ const index = () => {
         />
         <Text style={styles.textcontent}>Your new best Friend is waiting....</Text>
         <Text style={styles.description}>
-          Discover loving cats looking for a forever home and find the companion that fits your life perfectly
+          Discover loving cats looking for a forever home and find the companion that fits your life perfectly.
         </Text>
 
-          <Button onPress={navigateToNextScreen}  />
+        <Button 
+        title ="Let's Find My Kitten"
+        onPress={navigateToNextScreen} />
       </View>
     </View>
   )
